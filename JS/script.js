@@ -19,7 +19,7 @@ QnA = [
         crcAnswer: "dogs"
     },
     {
-        question:"What is the worst animal",
+        question:"What is the worst animal?",
         options:["dogs", "cats", "camels", "lizards"],
         crcAnswer: "cats"
     },
