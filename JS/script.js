@@ -41,3 +41,15 @@ function startQuiz(){
     timer()
     showNext()
 }
+
+function timer(){
+    var interval = setInterval(function(){
+        btn.textContent = countdown;
+
+        if(countdown <= 0){
+            clearInterval(interval)
+        }
+        countdown--;
+    }, 1000)
+}
+
