@@ -32,7 +32,12 @@ QnA = [
         question: "What is the most amazing animal?",
         options: ["dogs", "cats", "camels", "lizards"],
         crcAnswer: "lizards"
-    },
-
-
+    }
 ]
+
+function startQuiz(){
+    headerHtml.setAttribute("class", "hide");
+    questionArea.setAttribute("class", "");
+    timer()
+    showNext()
+}
