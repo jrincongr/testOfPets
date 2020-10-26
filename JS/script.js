@@ -53,3 +53,19 @@ function timer(){
     }, 1000)
 }
 
+function showNext() {
+    questionEl.textContent = QnA[currentQuestion].question
+    opt1.textContent = QnA[currentQuestion].options[0]
+    opt2.textContent = QnA[currentQuestion].options[1]
+    opt3.textContent = QnA[currentQuestion].options[2]
+    opt4.textContent = QnA[currentQuestion].options[3]
+    currentQuestion++;
+}
+
+btn.addEventListener("click", startQuiz);
+questionEl.addEventListener("click", showNext);
+opt1.addEventListener("click", showNext)
+opt2.addEventListener("click", showNext)
+opt3.addEventListener("click", showNext)
+opt4.addEventListener("click", showNext)
+
