@@ -1,7 +1,11 @@
 var btn = document.getElementById("test-button");
 var headerHtml = document.getElementById("testingVisual");
-var questionArea = document.getElementById("questionArea")
+var questionArea = document.getElementById("questionArea");
 var questionEl = document.getElementById("question");
+var timerEl = document.getElementById("timerEl");
+var timerHtml = document.getElementById("timerHtml");
+var resultScreen = document.getElementById("resultScreen");
+var scoreBoard = document.getElementById("score");
 
 //buttons
 var opt1 = document.getElementById("option1")
@@ -10,7 +14,7 @@ var opt3 = document.getElementById("option3")
 var opt4 = document.getElementById("option4")
 
 var currentQuestion=0;
-var countdown = 10;
+var countdown = 100;
 
 QnA = [
     {
@@ -44,22 +48,41 @@ function startQuiz(){
 
 function timer(){
     var interval = setInterval(function(){
-        btn.textContent = countdown;
+        timerEl.textContent = countdown;
 
-        if(countdown <= 0){
+        if(countdown <= 0 || currentQuestion >= 5){
             clearInterval(interval)
+            questionArea.setAttribute("class", "hide");
+            resultScreen.setAttribute("class", "");
+            timerEl.textContent = "Game Over!"
+            scoreBoard.textContent = countdown
         }
         countdown--;
     }, 1000)
 }
 
 function showNext() {
-    questionEl.textContent = QnA[currentQuestion].question
-    opt1.textContent = QnA[currentQuestion].options[0]
-    opt2.textContent = QnA[currentQuestion].options[1]
-    opt3.textContent = QnA[currentQuestion].options[2]
-    opt4.textContent = QnA[currentQuestion].options[3]
-    currentQuestion++;
+    // console.log(this)
+    // console.log(this.textContent)
+    if(currentQuestion > 0){
+        var previousAnswer = this.textContent
+        if(previousAnswer == QnA[currentQuestion-1].crcAnswer){
+            console.log("great")
+        } else {
+            console.log("wrong!")
+            countdown -= 25
+        }
+    }
+    if(QnA[currentQuestion]){
+        questionEl.textContent = QnA[currentQuestion].question
+        opt1.textContent = QnA[currentQuestion].options[0]
+        opt2.textContent = QnA[currentQuestion].options[1]
+        opt3.textContent = QnA[currentQuestion].options[2]
+        opt4.textContent = QnA[currentQuestion].options[3]
+        currentQuestion++;
+    }else{
+        currentQuestion++;
+    }
 }
 
 btn.addEventListener("click", startQuiz);
