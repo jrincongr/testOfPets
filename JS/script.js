@@ -1,3 +1,6 @@
+// JS script file of testOfPets
+
+// Variable Array
 var btn = document.getElementById("test-button");
 var headerHtml = document.getElementById("testingVisual");
 var questionArea = document.getElementById("questionArea");
@@ -7,15 +10,17 @@ var timerHtml = document.getElementById("timerHtml");
 var resultScreen = document.getElementById("resultScreen");
 var scoreBoard = document.getElementById("score");
 
-//buttons
+// Buttons
 var opt1 = document.getElementById("option1")
 var opt2 = document.getElementById("option2")
 var opt3 = document.getElementById("option3")
 var opt4 = document.getElementById("option4")
 
+// New variables
 var currentQuestion=0;
 var countdown = 100;
 
+// Question and answer array
 QnA = [
     {
         question: "What is the best animal?",
@@ -39,6 +44,7 @@ QnA = [
     }
 ]
 
+// Function to start quiz, (calls timer and showNext functions)
 function startQuiz(){
     headerHtml.setAttribute("class", "hide");
     questionArea.setAttribute("class", "");
@@ -46,6 +52,7 @@ function startQuiz(){
     showNext()
 }
 
+// Timer function
 function timer(){
     var interval = setInterval(function(){
         timerEl.textContent = countdown;
@@ -61,6 +68,7 @@ function timer(){
     }, 1000)
 }
 
+// showNext Function
 function showNext() {
     // console.log(this)
     // console.log(this.textContent)
@@ -85,6 +93,7 @@ function showNext() {
     }
 }
 
+// event listeners
 btn.addEventListener("click", startQuiz);
 questionEl.addEventListener("click", showNext);
 opt1.addEventListener("click", showNext)
