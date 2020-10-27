@@ -1,16 +1,18 @@
 # testOfPets
 
-## Your Task
+I want to see if people think about animals the same thing I do, so I created this test to see what they think.
 
-Build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+## My Task
+
+Build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
 
 
 ## User Story
 
 ```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+AS A pet lover
+I WANT other people to take a timed quiz on pets
+SO THAT I can know if other people know what I know about pets
 ```
 
 
