@@ -2,6 +2,14 @@
 
 I want to see if people think about animals the same thing I do, so I created this test to see what they think.
 
+## URL
+
+### Github aplication URL
+https://jrincongr.github.io/testOfPets/
+
+### Github repository URL
+https://github.com/jrincongr/testOfPets
+
 ## My Task
 
 Build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
